@@ -10,14 +10,10 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
+        <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+        body{
+            background-image: url(20252.jpg);
             }
 
             .full-height {
@@ -45,35 +41,58 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 74px;
             }
 
             .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: 600;
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #1883ba;
+            border-radius: 6px;
+            border: 2px solid #0016b0;
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 100px;
+               }
+            h1{
+                display: inline-block;
+                position: relative;
+                font-size: 100px;
+                font-family: 'Dancing Script',cursive;
             }
-        </style>
-    </head>
-    <body>
+            h1::after,h1::before{
+                content: '';
+                position: absolute;
+                width: 120px;
+                height: 3px;
+                background-color: black;
+                top: 0.6em;
+                
+            }
+            h1::before{
+                left: -150px;
+            }
+            h1:after{
+                right: -150px;
+            }
+    </style>
+</head>
+ <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">INGRESAR</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">REGISTRO
+                    </a>
                         @endif
                     @endauth
                 </div>
@@ -81,17 +100,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                     <h1>APRENDIENDO</h1>
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="señas">LENGUAJE DE SEÑAS</a>
+                    <a href="materia">MATERIAS COMPLETAS</a>
+                   
                 </div>
             </div>
         </div>
